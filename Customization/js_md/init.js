@@ -11,8 +11,8 @@ Reveal.initialize({
         { src: 'plugin/notes/notes.js', async: true },
         { src: 'plugin/highlight/highlight.js', async: true },
         { src: 'plugin/chalkboard/chalkboard.js', async: true },
-        { src: 'plugin/menu/menu.js', async: true }
-        
+        { src: 'plugin/menu/menu.js', async: true },
+
     ],
     // Display presentation control arrows
     controls: true,
@@ -152,23 +152,32 @@ Reveal.initialize({
     parallaxBackgroundVertical: null,
 
     // The display mode that will be used to show slides
-    display: 'block', 
-  
-	keyboard: {
-	    67: function() { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
-	    66: function() { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
-	    46: function() { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
-	     8: function() { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
-	    68: function() { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
-	    88: function() { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
-	    89: function() { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
+    display: 'block',
+
+    keyboard: {
+        67: function () { RevealChalkboard.toggleNotesCanvas() },	// toggle notes canvas when 'c' is pressed
+        66: function () { RevealChalkboard.toggleChalkboard() },	// toggle chalkboard when 'b' is pressed
+        46: function () { RevealChalkboard.clear() },	// clear chalkboard when 'DEL' is pressed
+        8: function () { RevealChalkboard.reset() },	// reset chalkboard data on current slide when 'BACKSPACE' is pressed
+        68: function () { RevealChalkboard.download() },	// downlad recorded chalkboard drawing when 'd' is pressed
+        88: function () { RevealChalkboard.colorNext() },	// cycle colors forward when 'x' is pressed
+        89: function () { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
     },
     chalkboard: { // font-awesome.min.css must be available
         src: "chalkboard/chalkboard.json",
         toggleChalkboardButton: true,
-        toggleChalkboardButton: { left: "80px", innerHTML:'<a href="#" onclick="RevealChalkboard.toggleChalkboard(); return false;"><i class="fas fa-pen-square"></i></a>'},
+        toggleChalkboardButton: {
+            left: "80px",
+            innerHTML: '<a href="#" onclick="RevealChalkboard.toggleChalkboard(); return false;"><i class="fas fa-pen-square"></i></a>'
+        },
         toggleNotesButton: true,
-        toggleNotesButton: { left: "130px",innerHTML: '<a href="#" onclick="RevealChalkboard.toggleNotesCanvas(); return false;"><i class="fas fa-pen"></i></a>'},
+        toggleNotesButton: {
+            left: "130px",
+            innerHTML: '<a href="#" onclick="RevealChalkboard.toggleNotesCanvas(); return false;"><i class="fas fa-pen"></i></a>'
+        },
+        boardmarkerWidth: 7,
+        chalkWidth: 10,
+        readOnly: false,
         // pen:  [ 'crosshair', 'pointer' ]
         // theme: "whiteboard",
         // background: [ 'rgba(127,127,127,.1)' , 'reveal.js-plugins/chalkboard/img/whiteboard.png' ],
@@ -178,7 +187,7 @@ Reveal.initialize({
         // draw: [ (RevealChalkboard) ?  RevealChalkboard.drawWithPen : null , (RevealChalkboard) ? RevealChalkboard.drawWithPen : null ],
     },
     menu: {
-		loadIcons: false        
+        loadIcons: false
     }
 
 });
