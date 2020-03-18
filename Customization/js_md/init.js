@@ -187,7 +187,7 @@ Reveal.initialize({
         // draw: [ (RevealChalkboard) ?  RevealChalkboard.drawWithPen : null , (RevealChalkboard) ? RevealChalkboard.drawWithPen : null ],
     },
     menu: {
-        loadIcons: false
+        // loadIcons: false
     }
 
 });
