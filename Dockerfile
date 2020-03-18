@@ -8,5 +8,6 @@ RUN apt update && apt upgrade \
 RUN mv /usr/share/nginx/html/ /usr/share/nginx/html_/ \
     && mkdir html
 COPY Revealjs/ /usr/share/nginx/html/
-COPY Customization/ /usr/share/nginx/html/
 COPY reveal.js-plugins/ /usr/share/nginx/html/plugin/
+
+COPY Customization/ /usr/share/nginx/html/
