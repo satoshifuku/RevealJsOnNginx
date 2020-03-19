@@ -259,8 +259,9 @@ try {
 		document.querySelector( '.reveal' ).appendChild( container );
 		drawingCanvas[id].container = container;
 	}
+	
+	setColor2Pens();
 
-	setColor2Pens()
 /*****************************************************************
 ** Storage
 ******************************************************************/
