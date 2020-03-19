@@ -164,7 +164,7 @@ Reveal.initialize({
         89: function () { RevealChalkboard.colorPrev() },	// cycle colors backward when 'y' is pressed
     },
     chalkboard: { // font-awesome.min.css must be available
-        src: "chalkboard/chalkboard.json",
+        src: "md/chalkboard.json",
         toggleChalkboardButton: true,
         toggleChalkboardButton: {
             left: "80px",
@@ -187,7 +187,7 @@ Reveal.initialize({
         // draw: [ (RevealChalkboard) ?  RevealChalkboard.drawWithPen : null , (RevealChalkboard) ? RevealChalkboard.drawWithPen : null ],
     },
     menu: {
-        loadIcons: false
+        // loadIcons: false
     }
 
 });
