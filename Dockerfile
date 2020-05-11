@@ -1,7 +1,7 @@
 FROM nginx
 LABEL maintainer="hosta1"
 
-RUN apt update && apt upgrade \
+RUN apt update && apt upgrade -y \
     && apt install -y --no-install-recommends \
     && apt install -y nodejs npm
 
