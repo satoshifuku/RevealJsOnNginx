@@ -10,4 +10,5 @@ RUN mv /usr/share/nginx/html/ /usr/share/nginx/html_/ \
 COPY Revealjs/ /usr/share/nginx/html/
 COPY reveal.js-plugins/ /usr/share/nginx/html/plugin/
 
+RUN rm -rf /usr/share/nginx/html/plugin/chalkboard
 COPY Customization/ /usr/share/nginx/html/
